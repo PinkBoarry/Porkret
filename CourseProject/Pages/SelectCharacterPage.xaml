@@ -1,0 +1,39 @@
+﻿<Page x:Class="CourseProject.Pages.SelectCharacterPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1150"
+      Title="Главная страница"
+      >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.15*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <Label Content="{Binding Path=CurrentUser}" Style="{StaticResource userNameLabel}" ContentStringFormat="Пользователь: {0}"/>
+            <Button x:Name="exitButton" Style="{StaticResource exitButtonStyle}" Content="Выйти" Click="exitButton_Click"/>
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" Grid.Column="1" VerticalAlignment="Center"  HorizontalAlignment="Center">
+            <Image Source="/Resources/Images/my2.png" />
+            <Label Style="{StaticResource appNameLabelStyle}" Content="Окно создания персонажа" VerticalAlignment="Center"  HorizontalAlignment="Center"/>
+        </StackPanel>
+        
+        <StackPanel VerticalAlignment="Center" Grid.Row="1" Grid.Column="1">
+            <Button x:Name="createCharacterButton" Style="{StaticResource TextButton}" Content="Создать персонажа" Click="createCharacterButton_Click" />
+            <Button x:Name="toCreatedCharactersPageButton" Style="{StaticResource TextButton}" Content="Созданные персонажи" Visibility="Collapsed"/>
+            <Button Style="{StaticResource TextButton}" Content="Просмотр книги игрока"/>
+            
+        </StackPanel>
+    </Grid>
+</Page>

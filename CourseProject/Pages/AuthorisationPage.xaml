@@ -1,0 +1,44 @@
+﻿<Page x:Name="authPage"
+	  x:Class="CourseProject.Pages.AuthorisationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:CourseProject.Pages"
+      mc:Ignorable="d"
+      d:DesignHeight="800" d:DesignWidth="1150"
+      Title="Авторизация">
+
+    <Grid>
+<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.15*"/>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="registrationLabelStackPanel" Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center" >
+            <Image Source="/Resources/Images/my2.png" />
+            <Label Style="{StaticResource appNameLabelStyle}" Content="{Binding Title, ElementName=authPage}" VerticalAlignment="Center"  HorizontalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel x:Name="stackPanel" Grid.Row="1" Grid.Column="1" Style="{StaticResource inputDataStackPanelStyle}">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
+                
+                <Label Style="{StaticResource textBoxLabelStyle}" Content="Логин" />
+                <TextBox Style="{StaticResource inputDataTextBox}" Name="loginTextBox" Text="{Binding Path=AuthorizationLogin, Mode=TwoWay}"/>
+                
+                <Label Style="{StaticResource textBoxLabelStyle}" Content="Пароль"/>
+                <TextBox x:Name="passwordBox" Style="{StaticResource inputDataTextBox}" Text="{Binding Path=AuthorizationPassword, Mode=TwoWay}"/>
+                
+                <Button x:Name="AuthorisationButton" Style="{StaticResource enterButtonStyle}" Content="Войти" Margin="15" Click="AuthorisationButton_Click"/>
+                <Button x:Name="toRegistrationButton" Style="{StaticResource enterButtonStyle}" Content="Зарегистрировтаься" Margin="15,0,15,15" Click="toRegistrationButton_Click"/>
+                <Button x:Name="enterWithoutAuthorisationButton" Style="{StaticResource enterWithoutLoginButtonStyle}" Content="Войти без авторизации" Click="enterWithoutAuthorisationButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,91 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="artbreeder-image %282%29.jpg" />
+    <None Remove="Inkulinati-Regular.otf" />
+    <None Remove="my2.png" />
+    <None Remove="Resources\Fonts\Inkulinati-Regular.otf" />
+    <None Remove="Resources\Images\Classes icon\Barbar_icon.png" />
+    <None Remove="Resources\Images\Classes icon\Bard_icon.png" />
+    <None Remove="Resources\Images\Classes icon\Crilic_icon.png" />
+    <None Remove="Resources\Images\Classes icon\Druid_icon.png" />
+    <None Remove="Resources\Images\Classes icon\Fighter_icon.png" />
+    <None Remove="Resources\Images\Classes icon\Monk_icon.png" />
+    <None Remove="Resources\Images\Classes icon\Paladin_icon.png" />
+    <None Remove="Resources\Images\Classes icon\Ranger_icon.png" />
+    <None Remove="Resources\Images\Classes icon\Rogue_icon.png" />
+    <None Remove="Resources\Images\Classes icon\Sorcer_icon.png" />
+    <None Remove="Resources\Images\Classes icon\Warlock_icon.png" />
+    <None Remove="Resources\Images\Classes icon\Wizard_icon.png" />
+    <None Remove="Resources\Images\my2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DBConnection\DBConnection.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="artbreeder-image (2).jpg" />
+    <Resource Include="Inkulinati-Regular.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="my2.png" />
+    <Resource Include="Resources\Fonts\Inkulinati-Regular.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\artbreeder-image %281%29.jpg" />
+    <Resource Include="Resources\Images\artbreeder-image %282%29.jpg" />
+    <Resource Include="Resources\Images\artbreeder-image %283%29.jpg" />
+    <Resource Include="Resources\Images\artbreeder-image %284%29.jpg" />
+    <Resource Include="Resources\Images\artbreeder-image %285%29.jpg" />
+    <Resource Include="Resources\Images\artbreeder-image %286%29.jpg" />
+    <Resource Include="Resources\Images\artbreeder-image.jpg" />
+    <Resource Include="Resources\Images\Classes icon\Barbar_icon.png" />
+    <Resource Include="Resources\Images\Classes icon\Bard_icon.png" />
+    <Resource Include="Resources\Images\Classes icon\Crilic_icon.png" />
+    <Resource Include="Resources\Images\Classes icon\Druid_icon.png" />
+    <Resource Include="Resources\Images\Classes icon\Fighter_icon.png" />
+    <Resource Include="Resources\Images\Classes icon\Monk_icon.png" />
+    <Resource Include="Resources\Images\Classes icon\Paladin_icon.png" />
+    <Resource Include="Resources\Images\Classes icon\Ranger_icon.png" />
+    <Resource Include="Resources\Images\Classes icon\Rogue_icon.png" />
+    <Resource Include="Resources\Images\Classes icon\Sorcer_icon.png" />
+    <Resource Include="Resources\Images\Classes icon\Warlock_icon.png" />
+    <Resource Include="Resources\Images\Classes icon\Wizard_icon.png" />
+    <Resource Include="Resources\Images\my2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Pages\RegistrationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+﻿<Window x:Class="CourseProject.CustomMessageBox.CustomOkMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseProject.CustomMessageBox"
+        mc:Ignorable="d"
+        Title="{Binding MessageBoxName}" Style="{StaticResource MessageBoxWindowStyle}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Style="{StaticResource MessageTextBlockStyle}" Text="{Binding MessageBoxText}" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <Button Grid.Row="1" x:Name="okButton" Style="{StaticResource ResultMessageButtonStyle}"  Content="OK" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="okButton_Click" />
+    </Grid>
+</Window>
