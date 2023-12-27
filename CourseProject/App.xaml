@@ -66,7 +66,7 @@
             </Setter>
             <Setter Property="FontSize" Value="18"/>
         </Style>
-
+        
         <Style BasedOn="{StaticResource TextButton}" TargetType="Button" x:Key="enterWithoutLoginButtonStyle">
             <Setter Property="Template">
                 <Setter.Value>
@@ -95,7 +95,10 @@
             <Setter Property="Margin" Value="10,10,10,10"/>
             <Setter Property="FontSize" Value="38"/>
         </Style>
-        
+        <Style BasedOn="{StaticResource appNameLabelStyle}" TargetType="Label" x:Key="selectVarLabelStyle">
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
         <Style TargetType="Label" BasedOn="{StaticResource appNameLabelStyle}" x:Key="userNameLabel">
             <Setter Property="Margin" Value="0"/>
             <Setter Property="FontSize" Value="18"/>
@@ -106,6 +109,11 @@
             <Setter Property="FontFamily" Value="/Resources/Fonts/#Inkulinati 210706"/>
             <Setter Property="TextAlignment" Value="Center"/>
         </Style>
+
+        <Style TargetType="TextBlock" x:Key="InformationTextBlock" BasedOn="{StaticResource currentActionTextBlock}">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+        </Style> 
 
         <Style TargetType="TextBlock" BasedOn="{StaticResource currentActionTextBlock}" x:Key="MessageTextBlockStyle">
             <Setter Property="FontSize" Value="18"/>

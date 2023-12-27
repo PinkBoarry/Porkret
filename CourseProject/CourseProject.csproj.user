@@ -16,6 +16,9 @@
     <Compile Update="Pages\SelectCharacterPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\SelectRacePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">
@@ -36,6 +39,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\SelectPortrait.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\SelectRacePage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

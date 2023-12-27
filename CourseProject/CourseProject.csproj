@@ -25,10 +25,45 @@
     <None Remove="Resources\Images\Classes icon\Warlock_icon.png" />
     <None Remove="Resources\Images\Classes icon\Wizard_icon.png" />
     <None Remove="Resources\Images\my2.png" />
+    <None Remove="Resources\Images\Portraits\dwarf_fem.jpg" />
+    <None Remove="Resources\Images\Portraits\dwarf_mal.jpg" />
+    <None Remove="Resources\Images\Portraits\elf_fem.jpg" />
+    <None Remove="Resources\Images\Portraits\elf_mal.jpg" />
+    <None Remove="Resources\Images\Portraits\gnome_fem.jpg" />
+    <None Remove="Resources\Images\Portraits\gnome_male.jpeg" />
+    <None Remove="Resources\Images\Portraits\half-orc_fmale.jpg" />
+    <None Remove="Resources\Images\Portraits\half-orc_male.jpg" />
+    <None Remove="Resources\Images\Portraits\halfelf_fem.jpg" />
+    <None Remove="Resources\Images\Portraits\halfelf_mal.jpg" />
+    <None Remove="Resources\Images\Portraits\halfling_fem.jpg" />
+    <None Remove="Resources\Images\Portraits\halfling_mal.jpg" />
+    <None Remove="Resources\Images\Portraits\human_fem.jpg" />
+    <None Remove="Resources\Images\Portraits\human_mal.jpg" />
+    <None Remove="Resources\Images\Portraits\tiefling_female.jpg" />
+    <None Remove="Resources\Images\Portraits\tiefling_male.jpg" />
+    <None Remove="Resources\Images\Races icons\drou.png" />
+    <None Remove="Resources\Images\Races icons\dwarf.png" />
+    <None Remove="Resources\Images\Races icons\elf.png" />
+    <None Remove="Resources\Images\Races icons\falfelf.png" />
+    <None Remove="Resources\Images\Races icons\gnome.png" />
+    <None Remove="Resources\Images\Races icons\halfling.png" />
+    <None Remove="Resources\Images\Races icons\heart.png" />
+    <None Remove="Resources\Images\Races icons\highelf.png" />
+    <None Remove="Resources\Images\Races icons\human.png" />
+    <None Remove="Resources\Images\Races icons\legkoleg.png" />
+    <None Remove="Resources\Images\Races icons\loasdrou.png" />
+    <None Remove="Resources\Images\Races icons\ork.png" />
+    <None Remove="Resources\Images\Races icons\selddrou.png" />
+    <None Remove="Resources\Images\Races icons\tifl.png" />
+    <None Remove="Resources\OriginList\CharacterList_edited.pdf" />
+    <None Remove="Resources\OriginList\CharacterList_origin.pdf" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Aspose.PDF" Version="23.11.1" />
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="itext7" Version="8.0.2" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
@@ -46,13 +81,6 @@
     <Resource Include="Resources\Fonts\Inkulinati-Regular.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\Images\artbreeder-image %281%29.jpg" />
-    <Resource Include="Resources\Images\artbreeder-image %282%29.jpg" />
-    <Resource Include="Resources\Images\artbreeder-image %283%29.jpg" />
-    <Resource Include="Resources\Images\artbreeder-image %284%29.jpg" />
-    <Resource Include="Resources\Images\artbreeder-image %285%29.jpg" />
-    <Resource Include="Resources\Images\artbreeder-image %286%29.jpg" />
-    <Resource Include="Resources\Images\artbreeder-image.jpg" />
     <Resource Include="Resources\Images\Classes icon\Barbar_icon.png" />
     <Resource Include="Resources\Images\Classes icon\Bard_icon.png" />
     <Resource Include="Resources\Images\Classes icon\Crilic_icon.png" />
@@ -66,6 +94,102 @@
     <Resource Include="Resources\Images\Classes icon\Warlock_icon.png" />
     <Resource Include="Resources\Images\Classes icon\Wizard_icon.png" />
     <Resource Include="Resources\Images\my2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Portraits\dwarf_fem.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Portraits\dwarf_mal.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Portraits\elf_fem.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Portraits\elf_mal.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Portraits\gnome_fem.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Portraits\gnome_male.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Portraits\half-orc_fmale.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Portraits\half-orc_male.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Portraits\halfelf_fem.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Portraits\halfelf_mal.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Portraits\halfling_fem.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Portraits\halfling_mal.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Portraits\human_fem.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Portraits\human_mal.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Portraits\tiefling_female.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Portraits\tiefling_male.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Races icons\drou.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Races icons\dwarf.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Races icons\elf.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Races icons\falfelf.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Races icons\gnome.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Races icons\halfling.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Races icons\heart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Races icons\highelf.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Races icons\human.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Races icons\legkoleg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Races icons\loasdrou.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Races icons\ork.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Races icons\selddrou.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Races icons\tifl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\OriginList\CharacterList_edited.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\OriginList\CharacterList_origin.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

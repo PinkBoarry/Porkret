@@ -1,6 +1,7 @@
 ﻿using DBConnection.Data;
 using DBConnection.Models;
 using MainWork.Navigation;
+using Pages;
 using System;
 using System.Windows.Controls;
 
@@ -30,7 +31,7 @@ namespace CourseProject.Pages
 
         private void createCharacterButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            NavigationManager.MainFrame.Navigate(new RegistrationPage());
+            NavigationManager.MainFrame.Navigate(new SelectRacePage());
         }
 
         private void exitButton_Click(object sender, System.Windows.RoutedEventArgs e)

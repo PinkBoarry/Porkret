@@ -78,7 +78,7 @@ public partial class CreatorDbContext : DbContext
     public virtual DbSet<WeaponType> WeaponTypes { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseMySQL("server=192.168.0.46;port=3306;user=user;password=pass;database=creatordb");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -789,6 +789,9 @@ public partial class CreatorDbContext : DbContext
             entity.Property(e => e.History)
                 .HasColumnType("text")
                 .HasColumnName("history");
+            entity.Property(e => e.IconPath)
+                .HasColumnType("text")
+                .HasColumnName("icon_path");
             entity.Property(e => e.Name)
                 .HasMaxLength(45)
                 .HasColumnName("name");
@@ -932,7 +935,7 @@ public partial class CreatorDbContext : DbContext
                 .HasMaxLength(45)
                 .HasColumnName("login");
             entity.Property(e => e.Password)
-                .HasMaxLength(45)
+                .HasMaxLength(60)
                 .HasColumnName("password");
         });
 
