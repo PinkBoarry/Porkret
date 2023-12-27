@@ -91,7 +91,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Button Style="{StaticResource navigationButtonStyle}" Content="Назад" />
-                    <Button Style="{StaticResource navigationButtonStyle}" Content="Далее" Grid.Column="1" Click="Button_Click"/>
+                    <Button x:Name="toClassSelectPage" Style="{StaticResource navigationButtonStyle}" Content="Далее" Grid.Column="1" Click="toClassSelectPage_Click"/>
                 </Grid>
             </Grid>
 

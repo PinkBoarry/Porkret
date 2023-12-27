@@ -1,4 +1,7 @@
 ﻿using DBConnection.Models;
+using iText.Forms;
+using iText.Kernel.Pdf;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Windows;
@@ -26,11 +29,23 @@ namespace CourseProject.Pages
         private void Race_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             _raceSelectData.SelectRace((sender as FrameworkElement).DataContext as Race);
+            
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private void toClassSelectPage_Click(object sender, RoutedEventArgs e)
         {
-
+            string sourcePdfPath = "C:\\Users\\Hru\\source\\repos\\CourseProject\\CourseProject\\Resources\\OriginList\\CharacterList_origin.pdf";
+            string outputPdfPath = "C:\\Users\\Hru\\source\\repos\\CourseProject\\CourseProject\\Resources\\OriginList\\CharacterList_edited.pdf";
+            using (PdfReader pdfReader = new PdfReader(sourcePdfPath))
+            {
+                using (PdfWriter pdfWriter = new PdfWriter(outputPdfPath))
+                {
+                    PdfDocument pdfDocument = new PdfDocument(pdfReader, pdfWriter);
+                    PdfAcroForm acroForm = PdfAcroForm.GetAcroForm(pdfDocument, true);
+                    acroForm.GetField("Race").SetValue(_raceSelectData.SelectedRace.Name);
+                    pdfDocument.Close();
+                }
+            }
         }
     }
 }
